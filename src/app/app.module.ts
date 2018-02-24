@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import {ModelFormComponent} from './shared/ModelFormComponent';
 
 
 @NgModule({
@@ -12,7 +13,9 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+      ModelFormComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
