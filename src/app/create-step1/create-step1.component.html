@@ -1,0 +1,18 @@
+<section class="container-fluid">
+<div class="create-step1-body">
+	<h3>Reactive Form</h3>
+	<form (ngSubmit)="onSubmit()" [formGroup]="form">
+		<div *ngFor="let field of fields" class="form-row">
+			<app-field [field]="field" [form]="form"></app-field>
+		</div>
+
+	<div class="form-row">
+		<button type="submit" [disabled]="!form.valid">Save</button>
+	</div>
+	</form>
+</div>
+
+<div *ngIf="payload" class="form-row">
+	<strong>Saved the following values</strong><br>{{payload}}
+</div>
+</section>

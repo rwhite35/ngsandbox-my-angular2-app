@@ -1,21 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
-import {ModelFormComponent} from './shared/ModelFormComponent';
+import { CreateStep1Component } from './create-step1/create-step1.component';
+import {CreateStep1FieldComponent} from './create-step1/create-step1-field.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CreateStep1Component,
+    CreateStep1FieldComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule,
   ],
-  providers: [
-      ModelFormComponent
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
