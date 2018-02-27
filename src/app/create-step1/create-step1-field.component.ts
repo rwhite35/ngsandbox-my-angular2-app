@@ -1,6 +1,6 @@
 /**
- * Responsible for rendering the details of each individual dield based on values in the
- * data-bound field object. Used by ngFor to define the field.
+ * Responsible for rendering the details of each individual field based on values
+ * in the data-bound field object. Used by ngFor to define the field.
  *
  * Checks if field is valid.
  */
