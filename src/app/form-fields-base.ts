@@ -18,6 +18,8 @@ export class FormFieldsBase<T> {
     maxlength: number;
     controlType: string;
     order: number;
+    // added later
+    placeholder: string;
 
     constructor(options: {
         value?: T,
@@ -27,7 +29,8 @@ export class FormFieldsBase<T> {
         minlength?: number,
         maxlength?: number,
         controlType?: string,
-        order?: number
+        order?: number,
+        placeholder?: string,
     } = {}) {
         this.value = options.value;
         this.key = options.key || '';
@@ -37,6 +40,7 @@ export class FormFieldsBase<T> {
         this.maxlength = options.maxlength === undefined ? 23 : options.maxlength;
         this.controlType = options.controlType || '';
         this.order = options.order === undefined ? 1 : options.order;
+        this.placeholder = options.placeholder !== undefined ? options.placeholder : '';
     }
 }
 

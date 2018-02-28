@@ -16,16 +16,16 @@ export class FormFieldsService {
 
     getFields() {
 
-        let fields: FormFieldsBase<any>[] = [
+        const fields: FormFieldsBase<any>[] = [
 
             new FieldSelect({
                 key: 'levels',
                 label: 'Select A Level',
                 options: [
-                    {key: 'l1', value: 1},
-                    {key: 'l2', value: 2},
-                    {key: 'l3', value: 4},
-                    {key: 'l4', value: 5},
+                    {key: '1', value: 1},
+                    {key: '2', value: 2},
+                    {key: '3', value: 4},
+                    {key: '4', value: 5},
                     {key: 'unproven', value: 'Unproven'}
                 ],
                 order: 2
@@ -38,8 +38,19 @@ export class FormFieldsService {
                 required: true,
                 minlength: 23,
                 order: 1
+            }),
+
+            new FieldTextbox({
+                key: 'score',
+                label: 'Scores',
+                value: '',
+                required: true,
+                minlength: 4,
+                order: 3
             })
+
         ];
+        console.log('fields object ' + JSON.stringify(fields));
 
         return fields.sort((a, b) => a.order - b.order);
     }

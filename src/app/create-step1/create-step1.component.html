@@ -5,7 +5,7 @@
 		<div *ngFor="let field of fields" class="form-row">
 			<app-field [field]="field" [form]="form"></app-field>
 		</div>
-
+	<br>
 	<div class="form-row">
 		<button type="submit" [disabled]="!form.valid">Save</button>
 	</div>
